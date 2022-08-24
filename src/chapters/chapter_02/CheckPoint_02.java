@@ -2,7 +2,7 @@ package chapters.chapter_02;
 
 import java.util.Scanner;
 
-public class ComputeAreaWithConstant {
+public class CheckPoint_02 {
 
 	public static void main(String[] args) {
 		final double PI = 3.14159;
@@ -20,3 +20,5 @@ public class ComputeAreaWithConstant {
 	}
 
 }
+
+
