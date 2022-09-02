@@ -22,9 +22,9 @@ public class Exercise_25 {
 		double y;
 		
 		double a = (y1 - y2);
-		double b = (x1 - x2);
+		double b = (x2 - x1);
 		double c = (y3 - y4);
-		double d = (x3 - x4);
+		double d = (x4 - x3);
 		double e = (y1 - y2) * x1 - (x1 - x2) * y1;
 		double f = (y3 - y4) * x3 - (x3 - x4) * y3;
 		
@@ -34,10 +34,10 @@ public class Exercise_25 {
 		if ((a * d - b * c) == 0) {
 			System.out.println("The two lines are parallel");
 			System.exit(1);
-		}
+		}else {
 		
 		System.out.println("The intersecting point is at (" + x + ", " + y + ")");
 		
 	}
-
+	}
 }
