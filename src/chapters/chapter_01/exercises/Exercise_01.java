@@ -1,6 +1,6 @@
 package chapters.chapter_01.exercises;
 
-public class Exercise01 {
+public class Exercise_01 {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Java");
