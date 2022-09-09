@@ -1,11 +1,10 @@
-package weeks.week_01;
+package chapters.chapter_05.examples;
 
 import java.util.Scanner;
 
-public class Testing {
+public class GuessNumberBetterSolve {
 
 	public static void main(String[] args) {
-
 		// Generate a random number to be guessed
 		int number = (int) (Math.random() * 101);
 
