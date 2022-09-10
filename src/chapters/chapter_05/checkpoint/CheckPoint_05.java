@@ -1,6 +1,6 @@
 package chapters.chapter_05.checkpoint;
 
-public class Exercise_05 {
+public class CheckPoint_05 {
 
 	public static void main(String[] args) {
 									//???????????
