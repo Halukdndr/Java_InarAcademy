@@ -2,7 +2,7 @@ package chapters.chapter_05.checkpoint;
 
 import java.util.Scanner;
 
-public class CheckPoint06 {
+public class CheckPoint_06 {
 	public static void main(String[] args) {
 
 		int number, max;
