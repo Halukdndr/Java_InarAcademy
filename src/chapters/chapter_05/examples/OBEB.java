@@ -15,7 +15,7 @@ public class OBEB {
 		int obeb = 1;
 		int divider = 1;
 		
-		while (divider <= num1 && divider <= num2) {
+		while (divider <= num1 && divider <= num2 ) {
 			if (num1 % divider == 0 && num2 % divider == 0) {
 				obeb = divider;
 			}
