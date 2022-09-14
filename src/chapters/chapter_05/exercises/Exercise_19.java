@@ -7,7 +7,7 @@ public class Exercise_19 {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("enter a number:");
+		System.out.println("Enter a number between 1 and 14 :");
 		int limit = input.nextInt();
 		int k = 0;
 		for (int i = 1; i <= limit; i++) {
