@@ -3,7 +3,7 @@ package chapters.chapter_04.exercises;
 public class Exercise_03 {
 
 	public static void main(String[] args) {
-		final double radius = 6_371.01;
+		final double RADIUS = 6_371.01;
 		double xChar = 35.227085;
 		double yChar = - 80.843124;
 		double xAta = 33.753746;
@@ -13,13 +13,13 @@ public class Exercise_03 {
 		double xSav = 32.076176;
 		double ySav = - 81.088371;
 		
-		double dCA = radius * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xAta)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xAta)) * Math.cos(Math.toRadians(yChar - yAta) ));
-		double dAS = radius * Math.acos(Math.sin(Math.toRadians(xAta)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xAta)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yAta - ySav) ));
+		double dCA = RADIUS * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xAta)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xAta)) * Math.cos(Math.toRadians(yChar - yAta) ));
+		double dAS = RADIUS * Math.acos(Math.sin(Math.toRadians(xAta)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xAta)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yAta - ySav) ));
 		
-		double dCS = radius * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yChar - ySav) ));
+		double dCS = RADIUS * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yChar - ySav) ));
 		
-		double dCF = radius * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xFlo)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xFlo)) * Math.cos(Math.toRadians(yChar - yFlo) ));
-		double dFS = radius * Math.acos(Math.sin(Math.toRadians(xFlo)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xFlo)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yFlo - ySav) ));
+		double dCF = RADIUS * Math.acos(Math.sin(Math.toRadians(xChar)) * Math.sin(Math.toRadians(xFlo)) + Math.cos(Math.toRadians(xChar)) * Math.cos(Math.toRadians(xFlo)) * Math.cos(Math.toRadians(yChar - yFlo) ));
+		double dFS = RADIUS * Math.acos(Math.sin(Math.toRadians(xFlo)) * Math.sin(Math.toRadians(xSav)) + Math.cos(Math.toRadians(xFlo)) * Math.cos(Math.toRadians(xSav)) * Math.cos(Math.toRadians(yFlo - ySav) ));
 		
 		double s1 = (dCA + dAS + dCS) / 2;
 		double area1 = Math.sqrt(s1 * (s1 - dCA) * (s1 - dAS) * (s1 - dCS));
