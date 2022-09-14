@@ -9,7 +9,6 @@ public class Exercise_17 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter an integer between 1 and 15 :");
 		int limit = input.nextInt();
-		char space = ' ';
 		for (int i = 1; i <= limit; i++) {
 			for (int s = limit - i; s > 0; s--) {
 				System.out.print("   ");
