@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Exercise_09 {
 
 	public static void main(String[] args) {
-		
-		// TODO not finished!!!!!
-		
+
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the number of students: ");
 		int numOfStudents = input.nextInt();
@@ -23,15 +21,22 @@ public class Exercise_09 {
 			System.out.println("Enter the score of the student: ");
 			score = input.nextDouble();
 
+			if (i == 0) {
+				theBestStudent = name;
+				theBestScore = score;
+			}
 			if (score > theSecondScore) {
-				theSecondStudent = theBestStudent;
-				theSecondScore = theBestScore;
-				if (score > theBestScore) {
-					theBestScore = score;
-					theBestStudent = name;
+				theSecondScore = score;
+				theSecondStudent = name;
+				if (theSecondScore >= theBestScore) {
+					double temp = theSecondScore;
+					theSecondScore = theBestScore;
+					theBestScore = temp;
+					String str = theSecondStudent;
+					theSecondStudent = theBestStudent;
+					theBestStudent = str;
 				}
 			}
-
 		}
 		System.out.println("The best student is " + theBestStudent + " and his/her score is " + theBestScore);
 		System.out.println("The second student is " + theSecondStudent + " and his/her score is " + theSecondScore);
