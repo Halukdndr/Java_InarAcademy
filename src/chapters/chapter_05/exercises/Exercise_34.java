@@ -7,18 +7,39 @@ public class Exercise_34 {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the first 9 digits of an ISBN as integer:");
-		String str = input.next();
-		int sum = 0;
-		for (int i = 0; i < 9; i++) {
-			char ch = str.charAt(i);
-			int d = (int) ch - 48;
-			sum += d * (i + 1);
-		}
-		if (sum % 11 == 10) {
-			System.out.println("The ISBN-10 number is " + str + "X");
-		} else
-			System.out.println("The ISBN-10 number is " + str + "" + (sum % 11));
-	}
 
+		int comWin = 0;
+		int userWin = 0;
+
+		while (comWin + 3 != userWin && userWin + 3 != comWin) {
+			int comNum = (int) (Math.random() * 3);
+			System.out.println("Enter 0 for Rock, 1 for Paper, 2 for Scissor:");
+			int userNum = input.nextInt();
+
+			if (userNum > 2 || userNum < 0) {
+				System.err.println("The input is invalid!");
+			} else {
+
+				if (comNum == 0 && userNum == 2 || comNum == 1 && userNum == 0 || comNum == 2 && userNum == 1) {
+					comWin++;
+					System.out.println("Computer won!");
+					System.out.println("Computer: " + comWin + " You: " + userWin);
+				} else if (userNum == 0 && comNum == 2 || userNum == 1 && comNum == 0 || userNum == 2 && comNum == 1) {
+					userWin++;
+					System.out.println("You won!");
+					System.out.println("Computer: " + comWin + " You: " + userWin);
+				} else {
+					System.out.println("Deuce");
+					System.out.println("Computer: " + comWin + " You: " + userWin);
+				}
+			}
+		}
+
+		if (comWin == userWin + 3) {
+			System.err.println("Game over!Try your chance later");
+		} else {
+			System.err.println("Congrats!You have defeated the computer");
+		}
+
+	}
 }
