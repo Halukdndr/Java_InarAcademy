@@ -9,6 +9,6 @@ public class CheckPoint_26 {
         java.util.Arrays.sort(list);  //
         System.out.println(Arrays.toString(list));
         // No it's a method in java class and there exist an array in sort method
-        // and our local method invokes it and use it's referance
+        // and our local method invokes it and use its reference
     }
 }
