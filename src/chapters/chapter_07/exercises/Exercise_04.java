@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Exercise_04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the scores ");
+        System.out.println("Enter the scores (ends negative value)");
         double[] scores = new double[10];
         scores = fillWithScanner(input,scores);
         System.out.println(getAverage(scores) + " is average " + getBelowAverage(scores) + " students are below the average, " + getAboveAverage(scores) + " students are abow the average and " + getEqualAverage(scores) + " students get the average score ");
@@ -60,6 +60,7 @@ public class Exercise_04 {
             if (d > 100){
                 System.exit(0);
             }
+
             if (d >= 0) {
                 scores[i] = d;
                 i++;
