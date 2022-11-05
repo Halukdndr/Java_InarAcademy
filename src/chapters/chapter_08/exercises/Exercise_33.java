@@ -16,13 +16,11 @@ public class Exercise_33 {
         double[][] swaped = swap(points);
         double[] abcdef = Exercise_31.getABCDEF(swaped);
         double[] intersectingPoint = Exercise_31.getIntersectingPoint(abcdef);
-        System.out.println(Arrays.toString(intersectingPoint));
-        System.out.println(getSubArea(points[0][0],points[0][1],points[1][0],points[1][1],intersectingPoint[0],intersectingPoint[1]));
         double[] areaOfTriangles = new double[4];
-        areaOfTriangles[0] = getSubArea(points[0][0],points[0][1],points[1][0],points[1][1],intersectingPoint[0],intersectingPoint[1]);
+        areaOfTriangles[0] = getSubArea(points[0][0],points[0][1],points[2][0],points[2][1],intersectingPoint[0],intersectingPoint[1]);
         areaOfTriangles[1] = getSubArea(points[0][0],points[0][1],points[3][0],points[3][1],intersectingPoint[0],intersectingPoint[1]);
         areaOfTriangles[2] = getSubArea(points[2][0],points[2][1],points[1][0],points[1][1],intersectingPoint[0],intersectingPoint[1]);
-        areaOfTriangles[3] = getSubArea(points[3][0],points[3][1],points[2][0],points[2][1],intersectingPoint[0],intersectingPoint[1]);
+        areaOfTriangles[3] = getSubArea(points[3][0],points[3][1],points[1][0],points[1][1],intersectingPoint[0],intersectingPoint[1]);
         for (int r = 0; r < areaOfTriangles.length - 1; r++) {
             for (int i = r +1; i < areaOfTriangles.length; i++) {
                 if (areaOfTriangles[r] > areaOfTriangles[i]){
