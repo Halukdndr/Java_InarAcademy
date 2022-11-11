@@ -3,7 +3,7 @@ package chapters.chapter_02.examples;
 public class ShowCurrentTime {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		 long totalMilliseconds = System.currentTimeMillis();
 		 
 		 long totalSeconds = totalMilliseconds / 1000;
