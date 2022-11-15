@@ -1,4 +1,4 @@
-package chapters.chapter_09.exercises;
+package chapters.chapter_10.exercises;
 
 import java.math.BigDecimal;
 
