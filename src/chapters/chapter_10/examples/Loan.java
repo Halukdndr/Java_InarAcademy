@@ -52,5 +52,9 @@ public class Loan {
     public double getTotalPayment(){
         return getMonthlyPayment() * numberOfYears * 12;
     }
+    @Override
+    public String toString(){
+        return "total payment: " + getTotalPayment() + " monthly payment " + getMonthlyPayment();
+    }
 
 }
